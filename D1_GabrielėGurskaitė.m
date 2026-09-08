@@ -21,3 +21,9 @@ docsearch plot
 help title
 doc title
 docsearch title
+
+%9 punktas
+
+% LINSPACE - generuoja vienodais tarpais išsidėsčiusių skaičių seką tarp dviejų reikšmių.
+% SIZE - grąžina matricos arba masyvo matmenis (eilučių ir stulpelių skaičių).
+% MAX - suranda didžiausią masyvo reikšmę ir jos vietos indeksą.
