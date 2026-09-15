@@ -35,3 +35,11 @@ kiekisVirsU1 = length(virsU1)
 % 3e
 maxFiltr = max(xf)
 minFiltr = min(xf)
+
+% Papildomos uzduoties 5 variantas
+
+A = input('Iveskite vektoriu A: ');
+A = A(:)';
+B = [A(1:end), A(end:-1:1)];
+disp('vektorius B yra:');
+disp(B);
