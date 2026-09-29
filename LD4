@@ -1,0 +1,46 @@
+% pagrindinės užduoties 11 variantas
+clc; clear; close all;
+
+figure('Name', 'LD4 - 11 variantas');
+
+%% a) f(x,y) = 1 - 2x^2 - 3y^2, kai x = r*cos(theta), y = r*sin(theta)
+clc; clear; close all;
+
+%% a dalis
+n_theta  = 60;
+n_r      = 30;
+kampas_a = 50;
+
+theta = linspace(0, 2*pi, n_theta);
+r     = linspace(0, 1, n_r);
+[R, T] = meshgrid(r, theta);
+Xa = R .* cos(T);
+Ya = R .* sin(T);
+Za = 1 - 2*Xa.^2 - 3*Ya.^2;
+
+figure('Name', 'a dalis');
+ha = surf(Xa, Ya, Za);
+colormap(jet);
+shading interp;
+rotate(ha, [0 0 1], kampas_a);
+xlabel('x'); ylabel('y'); zlabel('f(x,y)');
+title('a) f(x,y) = 1 - 2x^2 - 3y^2');
+grid on; axis tight;
+
+%% b dalis
+n_rand   = 200;
+kampas_b = 30;
+
+x = sort((2*rand(1, n_rand) - 1) .* sqrt(pi/2));
+y = sort((2*rand(1, n_rand) - 1) .* sqrt(pi/2));
+[Xb, Yb] = meshgrid(x, y);
+Zb = sin(Xb.^2 + Yb.^2);
+
+figure('Name', 'b dalis');
+hb = surf(Xb, Yb, Zb);
+colormap(jet);
+shading interp;
+rotate(hb, [0 0 1], kampas_b);
+xlabel('x'); ylabel('y'); zlabel('f(x,y)');
+title('b) f(x,y) = sin(x^2 + y^2)');
+grid on; axis tight;
