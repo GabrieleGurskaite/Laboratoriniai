@@ -45,7 +45,7 @@ xlabel('x'); ylabel('y'); zlabel('f(x,y)');
 title('b) f(x,y) = sin(x^2 + y^2)');
 grid on; axis tight;
 
-%% Papildomos 11 variantas
+%% Papildomos 12 variantas
 
 n = 50;
 riba = 1;
