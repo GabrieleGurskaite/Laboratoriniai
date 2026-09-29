@@ -1,11 +1,6 @@
 % pagrindinės užduoties 11 variantas
 clc; clear; close all;
 
-figure('Name', 'LD4 - 11 variantas');
-
-%% a) f(x,y) = 1 - 2x^2 - 3y^2, kai x = r*cos(theta), y = r*sin(theta)
-clc; clear; close all;
-
 %% a dalis
 n_theta  = 60;
 n_r      = 30;
