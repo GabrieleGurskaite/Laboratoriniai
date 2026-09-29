@@ -44,3 +44,25 @@ rotate(hb, [0 0 1], kampas_b);
 xlabel('x'); ylabel('y'); zlabel('f(x,y)');
 title('b) f(x,y) = sin(x^2 + y^2)');
 grid on; axis tight;
+
+%% Papildomos 11 variantas
+
+n = 50;
+riba = 1;
+spalvos = {'parula', 'hot', 'cool'};
+
+[X, Y] = meshgrid(linspace(-riba, riba, n));
+Z = 1 - (X.^2 + Y.^2);
+
+figure('Name', 'Papildoma uzduotis - colormap');
+for k = 1:numel(spalvos)
+    ax = subplot(1, numel(spalvos), k);
+    surf(X, Y, Z);
+    colormap(ax, spalvos{k});
+    colorbar;
+    shading interp;
+    xlabel('x'); ylabel('y'); zlabel('z(x,y)');
+    title(['colormap: ', spalvos{k}]);
+    grid on; axis tight;
+end
+sgtitle('z(x,y) = 1 - (x^2 + y^2)');
